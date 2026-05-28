@@ -1,0 +1,119 @@
+/* =========================
+   ENTRY PAGE - MATCHER DESIGNET DITT
+========================= */
+
+body.entry-body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;
+
+    /* SAMME FARGER SOM NETTSIDEN DIN */
+    background: linear-gradient(
+        135deg,
+        #dbeafe,
+        #bfdbfe,
+        #93c5fd
+    );
+
+    overflow: hidden;
+}
+
+/* =========================
+   GLASS CONTAINER (samme stil som cards/hero)
+========================= */
+
+.entry-container {
+    text-align: center;
+
+    max-width: 700px;
+    padding: 60px 45px;
+
+    background: rgba(255,255,255,0.55);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 35px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    border: 1px solid rgba(255,255,255,0.4);
+
+    animation: fadeIn 0.8s ease;
+}
+
+/* =========================
+   TITTEL (samme blå som resten)
+========================= */
+
+.entry-container h1 {
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+
+    color: #1e3a8a;
+
+    text-shadow:
+        0 0 12px rgba(96,165,250,0.25);
+}
+
+/* =========================
+   TEKST (samme som paragraph i hero)
+========================= */
+
+.entry-container p {
+    font-size: 1.2rem;
+
+    margin-bottom: 35px;
+
+    color: #334155;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   KNAPP (samme stil som hero-btn)
+========================= */
+
+.enter-btn {
+    display: inline-block;
+
+    padding: 14px 35px;
+
+    background: #2563eb;
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+
+    box-shadow: 0 5px 20px rgba(37,99,235,0.3);
+}
+
+.enter-btn:hover {
+    transform: translateY(-3px);
+    background: #1d4ed8;
+}
+
+/* =========================
+   ANIMASJON
+========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
