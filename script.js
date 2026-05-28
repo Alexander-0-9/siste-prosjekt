@@ -31,4 +31,4 @@ function showSlide() {
   }
 }
 
-setInterval(showSlide, 3000);
+setInterval(showSlide,1500);
