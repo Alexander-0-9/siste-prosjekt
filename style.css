@@ -481,3 +481,55 @@ h2 {
 
     margin: auto;
 }
+
+.slideshow-container {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.slide.active {
+    display: block;
+}
+
+/* KNAPPER */
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+
+    border: none;
+    padding: 15px 20px;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}

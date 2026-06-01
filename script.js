@@ -11,24 +11,42 @@ menuBtn.addEventListener("click", () => {
 
 
 // SLIDESHOW
+let currentSlide = 0;
 
 const slides = document.querySelectorAll(".slide");
 
-let currentSlide = 0;
+function showSlide(index) {
 
-function showSlide() {
+    slides.forEach(slide => {
+        slide.style.display = "none";
+    });
 
-  slides.forEach(slide => {
-    slide.classList.remove("active");
-  });
+    if (index >= slides.length) {
+        currentSlide = 0;
+    }
 
-  slides[currentSlide].classList.add("active");
+    if (index < 0) {
+        currentSlide = slides.length - 1;
+    }
 
-  currentSlide++;
-
-  if (currentSlide >= slides.length) {
-    currentSlide = 0;
-  }
+    slides[currentSlide].style.display = "block";
 }
 
-setInterval(showSlide,1500);
+function changeSlide(direction) {
+    currentSlide += direction;
+    showSlide(currentSlide);
+}
+
+showSlide(currentSlide);
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "ArrowRight") {
+        changeSlide(1);
+    }
+
+    if (event.key === "ArrowLeft") {
+        changeSlide(-1);
+    }
+
+});
