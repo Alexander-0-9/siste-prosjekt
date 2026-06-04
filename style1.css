@@ -1,16 +1,17 @@
 /* =========================
    ENTRY PAGE - MATCHER DESIGNET DITT
+   Stil for inngangssiden
 ========================= */
 
 body.entry-body {
-    margin: 0;
-    height: 100vh;
+    margin: 0; /* Fjerner standard margin */
+    height: 100vh; /* Fyller hele skjermen i høyden */
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Flexbox-layout */
+    justify-content: center; /* Sentrerer horisontalt */
+    align-items: center; /* Sentrerer vertikalt */
 
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Skrifttype */
 
     /* SAMME FARGER SOM NETTSIDEN DIN */
     background: linear-gradient(
@@ -20,100 +21,105 @@ body.entry-body {
         #93c5fd
     );
 
-    overflow: hidden;
+    overflow: hidden; /* Skjuler scrollbars */
 }
 
 /* =========================
-   GLASS CONTAINER (samme stil som cards/hero)
+   GLASS CONTAINER
+   Hovedboks med glass-effekt
 ========================= */
 
 .entry-container {
-    text-align: center;
+    text-align: center; /* Sentrerer tekst */
 
-    max-width: 700px;
-    padding: 60px 45px;
+    max-width: 700px; /* Maks bredde på boksen */
+    padding: 60px 45px; /* Innvendig luft */
 
-    background: rgba(255,255,255,0.55);
+    background: rgba(255,255,255,0.55); /* Gjennomsiktig hvit */
 
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px); /* Glass blur-effekt */
 
-    border-radius: 35px;
+    border-radius: 35px; /* Runde hjørner */
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Skygge */
 
-    border: 1px solid rgba(255,255,255,0.4);
+    border: 1px solid rgba(255,255,255,0.4); /* Lett kant */
 
-    animation: fadeIn 0.8s ease;
+    animation: fadeIn 0.8s ease; /* Inn-fade animasjon */
 }
 
 /* =========================
-   TITTEL (samme blå som resten)
+   TITTEL
+   Hovedoverskrift på entry page
 ========================= */
 
 .entry-container h1 {
-    font-size: 3rem;
+    font-size: 3rem; /* Stor tekst */
 
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Avstand under tittel */
 
-    color: #1e3a8a;
+    color: #1e3a8a; /* Mørk blå */
 
     text-shadow:
-        0 0 12px rgba(96,165,250,0.25);
+        0 0 12px rgba(96,165,250,0.25); /* Lys glød */
 }
 
 /* =========================
-   TEKST (samme som paragraph i hero)
+   TEKST
+   Beskrivende paragraf
 ========================= */
 
 .entry-container p {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Tekststørrelse */
 
-    margin-bottom: 35px;
+    margin-bottom: 35px; /* Avstand under tekst */
 
-    color: #334155;
+    color: #334155; /* Gråblå tekst */
 
-    line-height: 1.6;
+    line-height: 1.6; /* Luft mellom linjer */
 }
 
 /* =========================
-   KNAPP (samme stil som hero-btn)
+   KNAPP
+   Enter-knapp
 ========================= */
 
 .enter-btn {
-    display: inline-block;
+    display: inline-block; /* Gjør den klikkbar som knapp */
 
-    padding: 14px 35px;
+    padding: 14px 35px; /* Innvendig luft */
 
-    background: #2563eb;
-    color: white;
+    background: #2563eb; /* Blå bakgrunn */
+    color: white; /* Hvit tekst */
 
-    text-decoration: none;
+    text-decoration: none; /* Fjerner understrek */
 
-    font-weight: 600;
+    font-weight: 600; /* Halvfet tekst */
 
-    border-radius: 12px;
+    border-radius: 12px; /* Runde hjørner */
 
-    transition: 0.3s ease;
+    transition: 0.3s ease; /* Myk hover-effekt */
 
-    box-shadow: 0 5px 20px rgba(37,99,235,0.3);
+    box-shadow: 0 5px 20px rgba(37,99,235,0.3); /* Skygge */
 }
 
 .enter-btn:hover {
-    transform: translateY(-3px);
-    background: #1d4ed8;
+    transform: translateY(-3px); /* Løfter knappen litt */
+    background: #1d4ed8; /* Mørkere blå ved hover */
 }
 
 /* =========================
    ANIMASJON
+   Fade-in effekt ved lasting
 ========================= */
 
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(15px);
+        opacity: 0; /* Starter usynlig */
+        transform: translateY(15px); /* Starter litt nede */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* Blir synlig */
+        transform: translateY(0); /* Ender på plass */
     }
 }
