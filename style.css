@@ -1,535 +1,551 @@
 /* =========================
    RESET
+   Nullstiller standard stil fra nettleseren
 ========================= */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Fjerner standard margin */
+    padding: 0; /* Fjerner standard padding */
+    box-sizing: border-box; /* Inkluderer padding og border i størrelseberegning */
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Gir myk scrolling ved klikk på lenker */
 }
 
 /* =========================
    BODY
+   Hele nettsidens grunnstil
 ========================= */
 
 body {
-    background: linear-gradient(
-        135deg,
-        #dbeafe,
-        #bfdbfe,
-        #93c5fd
+    background: linear-gradient( /* Lager gradientbakgrunn */
+        135deg, /* Vinkel på gradienten */
+        #dbeafe, /* Lys blå */
+        #bfdbfe, /* Mellom blå */
+        #93c5fd /* Mørkere blå */
     );
 
-    color: rgb(15, 23, 42);
+    color: rgb(15, 23, 42); /* Standard tekstfarge */
 
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+    font-family: 'Inter', sans-serif; /* Standard font for innhold */
+    line-height: 1.6; /* Luft mellom linjer */
 }
 
 /* =========================
    GLOBAL TITLES
+   Felles stil for overskrifter
 ========================= */
 
 h1,
 h2,
 h3 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif; /* Overskriftsfont */
+    font-weight: 700; /* Fet tekst */
+    letter-spacing: 1px; /* Litt luft mellom bokstaver */
 }
 
 /* =========================
    NAVBAR
+   Toppmeny
 ========================= */
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: sticky; /* Holder header fast på toppen ved scrolling */
+    top: 0; /* Fester den helt øverst */
+    z-index: 1000; /* Sørger for at navbar ligger over andre elementer */
 }
 
 .navbar {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.75); /* Gjennomsiktig hvit bakgrunn */
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Flexbox-layout */
+    justify-content: space-between; /* Logo til venstre, meny til høyre */
+    align-items: center; /* Sentrerer innhold vertikalt */
 
-    padding: 18px 10%;
+    padding: 18px 10%; /* Innvendig luft */
 
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px); /* Glass-effekt */
 
-    border-bottom: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.5); /* Svak linje nederst */
 
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Skygge under navbar */
 }
 
 /* LOGO */
 
 .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: flex; /* Plasserer logo og tekst på linje */
+    align-items: center; /* Sentrerer vertikalt */
+    gap: 12px; /* Mellomrom mellom logo og tekst */
 }
 
 .logo-container h1 {
-    color: #1e3a8a;
-    font-size: 1.8rem;
+    color: #1e3a8a; /* Mørk blå tekst */
+    font-size: 1.8rem; /* Størrelse på logo-tekst */
 }
 
 .logo-img {
-    height: 95px;
-    width: auto;
-    object-fit: contain;
+    height: 95px; /* Høyde på logo */
+    width: auto; /* Beholder proporsjoner */
+    object-fit: contain; /* Sørger for at bildet ikke strekkes */
 
-    transition: 0.3s ease;
+    transition: 0.3s ease; /* Myk animasjon ved hover */
 }
 
 .logo-img:hover {
-    transform: scale(1.08);
+    transform: scale(1.08); /* Gjør logo litt større når du holder over */
 }
 
-/* NAV LINKS */
+/* =========================
+   NAV LINKS
+   Navigasjonsmenyen i navbaren
+========================= */
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 40px;
+    display: flex; /* Viser lenkene på én linje */
+    list-style: none; /* Fjerner punkter fra listen */
+    gap: 40px; /* Avstand mellom lenkene */
 }
 
 .nav-links a {
-    color: #1e293b;
-    text-decoration: none;
+    color: #1e293b; /* Mørk tekstfarge */
+    text-decoration: none; /* Fjerner understrek */
 
-    font-weight: 600;
+    font-weight: 600; /* Halvfet tekst */
 
-    transition: 0.3s;
+    transition: 0.3s; /* Myk overgang ved hover */
 }
 
 .nav-links a:hover {
-    color: #2563eb;
+    color: #2563eb; /* Endrer farge når musepekeren holdes over */
 }
 
 .menu-btn {
-    display: none;
+    display: none; /* Skjuler menyknappen på store skjermer */
 
-    font-size: 28px;
-    cursor: pointer;
+    font-size: 28px; /* Størrelse på menyikonet */
+    cursor: pointer; /* Viser håndmarkør */
 
-    color: #1e293b;
+    color: #1e293b; /* Mørk farge på ikonet */
 }
 
 /* =========================
    HERO
+   Første seksjon brukeren ser
 ========================= */
 
 .hero {
-    min-height: 100vh;
+    min-height: 100vh; /* Fyller minst hele skjermhøyden */
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Bruker flexbox */
+    justify-content: center; /* Sentrerer innhold horisontalt */
+    align-items: center; /* Sentrerer innhold vertikalt */
 
-    text-align: center;
+    text-align: center; /* Sentrerer tekst */
 
-    padding: 40px;
+    padding: 40px; /* Innvendig avstand */
 }
 
 .hero-content {
-    background: rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.35); /* Gjennomsiktig hvit bakgrunn */
 
-    padding: 50px;
+    padding: 50px; /* Innvendig avstand */
 
-    border-radius: 30px;
+    border-radius: 30px; /* Runde hjørner */
 
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px); /* Glass-effekt */
 
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1); /* Skygge */
 
-    max-width: 900px;
+    max-width: 900px; /* Maksimal bredde */
 }
 
 .hero-content h2 {
-    font-size: 4rem;
+    font-size: 4rem; /* Stor overskrift */
 
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Avstand under overskriften */
 
-    color: #1e3a8a;
+    color: #1e3a8a; /* Mørk blå tekst */
 
     text-shadow:
-        0 0 12px rgba(96,165,250,0.25);
+        0 0 12px rgba(96,165,250,0.25); /* Lys glødeeffekt */
 }
 
 .hero-content p {
-    max-width: 700px;
+    max-width: 700px; /* Begrenser bredden på teksten */
 
-    margin: auto;
-    margin-bottom: 30px;
+    margin: auto; /* Sentrerer teksten */
+    margin-bottom: 30px; /* Avstand under teksten */
 
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* Tekststørrelse */
 
-    color: #334155;
+    color: #334155; /* Gråblå tekstfarge */
 }
 
 .hero-btn {
-    display: inline-block;
+    display: inline-block; /* Lar knappen få padding og størrelse */
 
-    background: #2563eb;
-    color: white;
+    background: #2563eb; /* Blå bakgrunn */
+    color: white; /* Hvit tekst */
 
-    padding: 14px 30px;
+    padding: 14px 30px; /* Innvendig avstand */
 
-    border-radius: 12px;
+    border-radius: 12px; /* Runde hjørner */
 
-    text-decoration: none;
+    text-decoration: none; /* Fjerner understrek */
 
-    font-weight: 600;
+    font-weight: 600; /* Halvfet tekst */
 
-    transition: 0.3s ease;
+    transition: 0.3s ease; /* Myk animasjon */
 
-    box-shadow: 0 5px 20px rgba(37,99,235,0.3);
+    box-shadow: 0 5px 20px rgba(37,99,235,0.3); /* Skygge */
 }
 
 .hero-btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px); /* Flytter knappen litt opp */
 
-    background: #1d4ed8;
+    background: #1d4ed8; /* Mørkere blå ved hover */
 }
 
 /* =========================
    GENERAL SECTIONS
+   Felles stil for alle seksjoner
 ========================= */
 
 section {
-    padding: 100px 10%;
+    padding: 100px 10%; /* Innvendig avstand rundt seksjonene */
 }
 
 .section-title {
-    text-align: center;
-    margin-bottom: 50px;
+    text-align: center; /* Sentrerer overskriften */
+    margin-bottom: 50px; /* Avstand under overskriften */
 }
 
 .section-title h2 {
-    font-size: 2.7rem;
+    font-size: 2.7rem; /* Størrelse på seksjonsoverskrift */
 
-    color: #1e3a8a;
+    color: #1e3a8a; /* Mørk blå farge */
 
     text-shadow:
-        0 0 12px rgba(96,165,250,0.25);
+        0 0 12px rgba(96,165,250,0.25); /* Lys glødeeffekt */
 }
 
 /* =========================
    ABOUT
+   Om-meg seksjonen
 ========================= */
 
 .about-container {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+    display: flex; /* Bruker flexbox */
+    align-items: center; /* Sentrerer innhold vertikalt */
+    gap: 50px; /* Avstand mellom bilde og tekst */
 
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Lar elementene flytte seg til ny linje ved behov */
 }
 
 .about-image img {
-    width: 320px;
+    width: 320px; /* Fast bredde på bildet */
 
-    border-radius: 20px;
+    border-radius: 20px; /* Runde hjørner */
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Skygge rundt bildet */
 }
 
 .about-text {
-    flex: 1;
+    flex: 1; /* Tekstområdet tar opp ledig plass */
 }
 
 .about-text h3 {
-    font-size: 2rem;
+    font-size: 2rem; /* Størrelse på undertittel */
 
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Avstand under overskriften */
 
-    color: #2563eb;
+    color: #2563eb; /* Blå farge */
 }
 
 .about-text p {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Avstand mellom avsnitt */
 
-    color: #334155;
+    color: #334155; /* Gråblå tekstfarge */
 
-    font-size: 1.05rem;
+    font-size: 1.05rem; /* Litt større tekst */
 }
 
 /* =========================
    SUBJECTS / CARDS
+   Oppsett for fagkortene på nettsiden
 ========================= */
 
 .card-container {
-    display: grid;
+    display: grid; /* Bruker grid-layout */
 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Lager responsive kolonner */
 
-    gap: 30px;
+    gap: 30px; /* Avstand mellom kortene */
 }
 
 /* CARD */
 
 .card {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.7); /* Gjennomsiktig hvit bakgrunn */
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* Glass-effekt */
 
-    border-radius: 25px;
+    border-radius: 25px; /* Runde hjørner */
 
-    overflow: hidden;
+    overflow: hidden; /* Skjuler innhold som går utenfor kortet */
 
-    padding: 25px;
+    padding: 25px; /* Innvendig avstand */
 
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Bruker flexbox */
+    flex-direction: column; /* Innholdet plasseres vertikalt */
 
-    transition: 0.4s ease;
+    transition: 0.4s ease; /* Myk animasjon */
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Skygge rundt kortet */
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Flytter kortet litt opp ved hover */
 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Større skygge ved hover */
 }
 
 /* CARD TEXT */
 
 .card h3 {
-    color: #2563eb;
+    color: #2563eb; /* Blå overskrift */
 
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Avstand under overskriften */
 
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* Størrelse på overskriften */
 }
 
 .card p {
-    color: #334155;
+    color: #334155; /* Mørk gråblå tekstfarge */
 
-    line-height: 1.7;
+    line-height: 1.7; /* Avstand mellom tekstlinjene */
 }
 
 /* =========================
    SLIDESHOW
+   Bildekarusell
 ========================= */
 
 .slideshow-container {
-    position: relative;
+    position: relative; /* Referansepunkt for knappene */
 
-    max-width: 900px;
+    max-width: 900px; /* Maksimal bredde */
 
-    margin: auto;
+    margin: auto; /* Sentrerer slideshowet */
 }
 
 .slide {
-    width: 100%;
+    width: 100%; /* Bildet fyller hele bredden */
 
-    display: none;
+    display: none; /* Skjuler bildene som standard */
 
-    border-radius: 25px;
+    border-radius: 25px; /* Runde hjørner */
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Skygge rundt bildet */
 }
 
 .slide.active {
-    display: block;
+    display: block; /* Viser det aktive bildet */
 }
 
 /* =========================
    CONTACT
+   Kontaktseksjon
 ========================= */
 
 .contact-box {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.7); /* Gjennomsiktig hvit bakgrunn */
 
-    padding: 40px;
+    padding: 40px; /* Innvendig avstand */
 
-    border-radius: 25px;
+    border-radius: 25px; /* Runde hjørner */
 
-    text-align: center;
+    text-align: center; /* Sentrerer teksten */
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* Glass-effekt */
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Skygge rundt boksen */
 }
 
 .contact-box p {
-    margin-bottom: 12px;
+    margin-bottom: 12px; /* Avstand mellom avsnittene */
 
-    color: #1e293b;
+    color: #1e293b; /* Mørk tekstfarge */
 
-    font-size: 1.05rem;
+    font-size: 1.05rem; /* Tekststørrelse */
 }
 
 /* =========================
    FOOTER
+   Nederste del av nettsiden
 ========================= */
 
 footer {
-    text-align: center;
+    text-align: center; /* Sentrerer innholdet */
 
-    padding: 30px;
+    padding: 30px; /* Innvendig avstand */
 
-    background: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.4); /* Gjennomsiktig bakgrunn */
 
-    color: #334155;
+    color: #334155; /* Tekstfarge */
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* Glass-effekt */
 
-    margin-top: 50px;
+    margin-top: 50px; /* Avstand til innholdet over */
 }
 
 /* =========================
    RESPONSIVE
+   Regler for skjermer mindre enn 768px
 ========================= */
 
 @media (max-width: 768px) {
 
     .navbar {
-        padding: 35px 7%;
+        padding: 35px 7%; /* Justerer avstanden i navbaren */
     }
 
     .nav-links {
-        position: absolute;
+        position: absolute; /* Plasserer menyen fritt */
 
-        top: 80px;
-        right: 20px;
+        top: 80px; /* Avstand fra toppen */
+        right: 20px; /* Avstand fra høyre side */
 
-        background: rgba(255,255,255,0.95);
+        background: rgba(255,255,255,0.95); /* Nesten helt hvit bakgrunn */
 
-        width: 220px;
+        width: 220px; /* Fast bredde */
 
-        flex-direction: column;
+        flex-direction: column; /* Menypunktene vises under hverandre */
 
-        padding: 20px;
+        padding: 20px; /* Innvendig avstand */
 
-        border-radius: 20px;
+        border-radius: 20px; /* Runde hjørner */
 
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Skygge */
 
-        display: none;
+        display: none; /* Skjult som standard */
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Viser menyen når active-klassen brukes */
     }
 
     .menu-btn {
-        display: block;
+        display: block; /* Viser hamburgermenyen */
     }
 
     .hero-content {
-        padding: 35px;
+        padding: 35px; /* Mindre innvendig avstand */
     }
 
     .hero-content h2 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Mindre overskrift på mobil */
     }
 
     .about-container {
-        flex-direction: column;
+        flex-direction: column; /* Legger elementene under hverandre */
     }
 
     .section-title h2 {
-        font-size: 2rem;
+        font-size: 2rem; /* Mindre seksjonsoverskrifter */
     }
 
     .logo-img {
-        height: 38px;
+        height: 38px; /* Mindre logo på små skjermer */
     }
 }
 h1,
 h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif; /* Skrifttype for hovedoverskrifter */
+    font-weight: 700; /* Fet tekst */
+    letter-spacing: 1px; /* Litt større avstand mellom bokstaver */
 
-    color: #1e3a8a;
+    color: #1e3a8a; /* Mørk blå tekstfarge */
 
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 1px white; /* Hvit kant rundt teksten */
 
     text-shadow:
-        0 0 10px rgba(255,255,255,0.4),
-        0 0 20px rgba(255,255,255,0.2);
+        0 0 10px rgba(255,255,255,0.4), /* Svak glød */
+        0 0 20px rgba(255,255,255,0.2); /* Ekstra glødeeffekt */
 }
+
 .about-container {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+    display: flex; /* Bruker flexbox-layout */
+    align-items: center; /* Sentrerer innhold vertikalt */
+    gap: 50px; /* Avstand mellom elementene */
 
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Lar elementene flytte seg til ny linje */
 
-    background: rgba(255,255,255,0.55);
+    background: rgba(255,255,255,0.55); /* Gjennomsiktig bakgrunn */
 
-    padding: 60px;
+    padding: 60px; /* Innvendig avstand */
 
-    border-radius: 35px;
+    border-radius: 35px; /* Runde hjørner */
 
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px); /* Glass-effekt */
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Skygge */
 
-    max-width: 1400px;
+    max-width: 1400px; /* Maks bredde */
 
-    margin: auto;
+    margin: auto; /* Sentrerer boksen */
 }
 
 .slideshow-container {
-    position: relative;
-    max-width: 900px;
-    margin: auto;
+    position: relative; /* Referansepunkt for knappene */
+    max-width: 900px; /* Maks bredde */
+    margin: auto; /* Sentrerer slideshowet */
 }
 
 .slide {
-    width: 100%;
-    display: none;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    width: 100%; /* Fyller hele bredden */
+    display: none; /* Skjuler bildet som standard */
+    border-radius: 25px; /* Runde hjørner */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Skygge */
 }
 
 .slide.active {
-    display: block;
+    display: block; /* Viser aktivt bilde */
 }
 
-/* KNAPPER */
+/* KNAPPER FOR SLIDESHOW */
 
 .prev,
 .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: absolute; /* Plasseres oppå bildet */
+    top: 50%; /* Midt på høyden */
+    transform: translateY(-50%); /* Perfekt vertikal sentrering */
 
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Mørk gjennomsiktig bakgrunn */
+    color: white; /* Hvit tekst */
 
-    border: none;
-    padding: 15px 20px;
+    border: none; /* Fjerner standard kant */
+    padding: 15px 20px; /* Størrelse på knappene */
 
-    font-size: 24px;
-    cursor: pointer;
+    font-size: 24px; /* Størrelse på pilene */
+    cursor: pointer; /* Håndmarkør */
 
-    border-radius: 50%;
+    border-radius: 50%; /* Runde knapper */
 
-    transition: 0.3s;
+    transition: 0.3s; /* Myk hover-effekt */
 }
 
 .prev:hover,
 .next:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* Mørkere ved hover */
 }
 
 .prev {
-    left: 15px;
+    left: 15px; /* Plasserer venstre knapp */
 }
 
 .next {
-    right: 15px;
+    right: 15px; /* Plasserer høyre knapp */
 }
